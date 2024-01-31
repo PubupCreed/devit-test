@@ -1,0 +1,12 @@
+{
+  "name": "devit-test",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "shopify theme dev --store test-task-shop.myshopify.com",
+    "pull": "shopify theme pull --store test-task-shop.myshopify.com",
+    "deploy": "shopify theme push --store test-task-shop.myshopify.com"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
