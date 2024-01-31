@@ -1,0 +1,22 @@
+{% comment %} Lazy loading {% endcomment %}
+{% if lazy or section.index > 2 %}
+    {% assign load_img = 'lazy' %}
+{% else %}
+    {% assign load_img = 'eager' %}
+{% endif %}
+
+{% comment %} Alt image {% endcomment %}
+{% if image.alt %}
+    {% assign alt_img = image.alt %}
+{% elsif alt == blank %}
+    {% assign alt_img = 'image' %}
+{% endif %}
+
+{{
+    image
+    | image_url: width: image.width
+    | image_tag: width: image.width, height: image.height,
+    class: class,
+    alt: alt_img,
+    loading: load_img
+}}
